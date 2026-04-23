@@ -27,11 +27,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          # отключаем встроенный кэш Yarn
+          cache: 'npm'
 
-      # Активация Corepack для использования Yarn 4
+
+      # Удаляем старый глобальный Yarn
+      - name: Remove global Yarn
+        run: sudo rm -f /usr/local/bin/yarn /usr/local/bin/yarnpkg
+
+      # Активируем Corepack
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare yarn@4.14.1 --activate
+
+      # Проверка версии (для отладки)
+      - name: Check Yarn version
+        run: yarn --version
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -50,10 +62,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
+
+      - name: Remove global Yarn
+        run: sudo rm -f /usr/local/bin/yarn /usr/local/bin/yarnpkg
 
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare yarn@4.14.1 --activate
+
+      - name: Check Yarn version
+        run: yarn --version
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -78,10 +98,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
+
+      - name: Remove global Yarn
+        run: sudo rm -f /usr/local/bin/yarn /usr/local/bin/yarnpkg
 
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare yarn@4.14.1 --activate
+
+      - name: Check Yarn version
+        run: yarn --version
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
