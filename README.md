@@ -2,9 +2,13 @@
 
 # Task Tracker with Pinned Tasks
 
-[![Deploy to GitHub Pages](https://github.com/ksanr/ahj3-2/actions/workflows/deploy.yml/badge.svg)](https://github.com/ваш-username/task-tracker/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/ksanr/ahj3-2/actions/workflows/deploy.yml/badge.svg)](https://github.com/ksanr/ahj3-2/actions/workflows/deploy.yml)
 
 Трекер задач с возможностью закрепления (pin) и фильтрацией.
+
+## Демонстрация работы
+
+[GitHub Pages](https://ksanr.github.io/ahj3-1/)
 
 ## Функциональность
 
