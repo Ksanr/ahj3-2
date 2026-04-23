@@ -8,7 +8,7 @@
 
 ## Демонстрация работы
 
-[GitHub Pages](https://ksanr.github.io/ahj3-1/)
+[GitHub Pages](https://ksanr.github.io/ahj3-2/)
 
 ## Функциональность
 
