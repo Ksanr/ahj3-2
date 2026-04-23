@@ -1,0 +1,168 @@
+/* ===== Глобальные стили ===== */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, 'Segoe UI', 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #e9eff7 0%, #dce4ef 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 24px;
+}
+
+/* ===== Основная карточка ===== */
+.tracker-card {
+  max-width: 780px;
+  width: 100%;
+  background: rgba(255,255,255,0.92);
+  border-radius: 40px;
+  box-shadow: 0 25px 45px -12px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.tracker-header {
+  background: #1e2a3e;
+  color: white;
+  padding: 24px 32px;
+}
+
+.tracker-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.tracker-header p {
+  margin: 6px 0 0;
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+/* ===== Поле ввода ===== */
+.input-area {
+  padding: 26px 32px 16px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #eef2f8;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #f8fafd;
+  border-radius: 60px;
+  padding: 4px 4px 4px 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.input-wrapper:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  background: white;
+}
+
+#taskInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 14px 0;
+  outline: none;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.error-hint {
+  font-size: 12px;
+  margin-top: 8px;
+  margin-left: 20px;
+  color: #e11d48;
+  min-height: 26px;
+}
+
+.error-hint span {
+  background: #ffe4e8;
+  padding: 4px 12px;
+  border-radius: 40px;
+}
+
+/* ===== Контейнер с задачами ===== */
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 32px 32px 32px;
+}
+
+.section {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #edf2f7;
+}
+
+.section-title {
+  background: #f9fbfe;
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 1px solid #eef2f8;
+  color: #1e293b;
+}
+
+.tasks-list {
+  padding: 8px 0;
+  min-height: 120px;
+}
+
+/* ===== Элемент задачи ===== */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid #f0f4f9;
+}
+
+.task-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+  flex: 1;
+  padding-right: 12px;
+}
+
+.pin-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 40px;
+  width: 44px;
+  height: 44px;
+}
+
+.pin-toggle:hover {
+  background: #eef2ff;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 28px 24px;
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.footer-note {
+  padding: 12px 32px 24px;
+  font-size: 11px;
+  text-align: center;
+  color: #7c8ba0;
+  border-top: 1px solid #eef2f8;
+  background: white;
+}

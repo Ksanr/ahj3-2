@@ -1,4 +1,49 @@
 {
   "name": "ahj3-2",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.14.1",
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
+    "@eslint/js": "^10.0.1",
+    "babel-jest": "^30.3.0",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.2.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.15.2",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.5.0",
+    "html-webpack-plugin": "^5.6.7",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "version": "1.0.0",
+  "description": "Трекер задач с закреплением и фильтрацией",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:check": "eslint . --max-warnings=0",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "task",
+    "tracker",
+    "pinned",
+    "webpack",
+    "jest"
+  ],
+  "author": "Ksanr"
 }
