@@ -44,6 +44,9 @@ module.exports = [
             'webpack.config.js',
             'jest.config.js',
             'eslint.config.js',
+            '.pnp.*',      // Добавляем PnP файлы
+            '.yarn/',      // Добавляем папку Yarn
+            '**/.pnp.*',   // Рекурсивно игнорируем
         ],
     },
 ];
