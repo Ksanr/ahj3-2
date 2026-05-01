@@ -47,9 +47,19 @@ function addNewTask(rawTaskName) {
     return false;
   }
 
+  // Проверка на дубликат
+  const isDuplicate = tasks.some(task => task.name.toLowerCase() === trimmedName.toLowerCase());
+  if (isDuplicate) {
+    showError('Такая задача уже существует!');
+    return false;
+  }
+
   clearError();
   const newTask = Task.create(trimmedName, false);
   tasks.push(newTask);
+
+  currentFilter = ''; // сброс фильтра
+  taskInput.value = ''; // очистка поля
 
   renderPinnedSection(tasks, pinnedContainer, togglePinStatus);
   renderAllTasksSection(tasks, currentFilter, allTasksContainer, togglePinStatus);
@@ -60,10 +70,7 @@ function addNewTask(rawTaskName) {
 function onEnterKey(event) {
   if (event.key === 'Enter') {
     event.preventDefault();
-    const success = addNewTask(taskInput.value);
-    if (success) {
-      taskInput.value = '';
-    }
+    addNewTask(taskInput.value);
   }
 }
 
